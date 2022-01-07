@@ -1,0 +1,102 @@
+Auth (Passport) {
+
+}
+
+
+API Routes {
+    acourse.co.id {
+        api {
+            v1 {
+
+                auth {
+                    /login,
+                    /signup,
+                    /logout,
+                    /refresh_token
+                }
+
+                courses {
+                    /,              -> [v] DONE,TESTED{Postman, Unit Test}
+                    /popular,
+                    /recomended
+                    /show/:id,
+                    /update/:id,
+                    /delete/:id,
+                    /subscribed,
+                    /search?=
+                },
+
+                bookmarks {
+                    /,
+                    /add?id=
+                    /delete?id=
+                }
+
+                carts {
+                    /,
+                    /add?id=
+                    /delete?id=
+                },
+
+                payments {
+                    /
+                }
+
+            }
+        }
+    }
+}
+
+
+Model Relation {
+
+    1. Users        -> Courses          [v] DONE,TESTED{Laravel Tinker, }
+                    -> Roles (Voyager)  [v] DONE,TESTED{Laravel Tinker, }
+                    -> Bookmarks        [v] DONE,TESTED{Laravel Tinker, }
+                    -> Views            [x] 
+                    -> Subscriptions    [v] DONE,TESTED{Laravel Tinker, }
+                    -> Carts            [v] DONE,TESTED{Laravel Tinker, }
+                    -> Orders           [v] DONE,TESTED{Laravel Tinker, }
+                    -> User_Settings    [v] DONE,TESTED{Laravel Tinker, }
+
+
+    2. Courses      -> Users            [v] DONE,TESTED{Laravel Tinker, }
+                    -> Materials        [v] DONE,TESTED{Laravel Tinker, }
+                    -> Bookmarks        [v] DONE,TESTED{Laravel Tinker, }
+                    -> Views            [x]
+                    -> Tags             [v] DONE,TESTED{Laravel Tinker, }
+                    -> Categories       [v] DONE,TESTED{Laravel Tinker, }
+                    -> Subscriptions    [v] DONE,TESTED{Laravel Tinker, }
+                    -> Carts            [v] DONE,TESTED{Laravel Tinker, }
+                    -> Orders           [v] DONE,TESTED{Laravel Tinker, }
+
+    3. Materials    -> Courses          [v] DONE,TESTED{Laravel Tinker, }
+
+    4. Bookmarks    -> Courses          [v] DONE,TESTED{Laravel Tinker, }
+                    -> Users            [v] DONE,TESTED{Laravel Tinker, }
+
+    5. Tags         -> Courses          [v] DONE,TESTED{Laravel Tinker, }
+                    -> Users            [v] DONE,TESTED{Laravel Tinker, }
+
+    6. Categories   -> Courses          [v] DONE,TESTED{Laravel Tinker, }
+                    -> Users            [v] DONE,TESTED{Laravel Tinker, }
+
+    7. Subscriptions -> Users           [v] DONE,TESTED{Laravel Tinker, }
+                     -> Courses         [v] DONE,TESTED{Laravel Tinker, }
+
+    8. Carts        -> Users            [v] DONE,TESTED{Laravel Tinker, }
+                    -> Courses          [v] DONE,TESTED{Laravel Tinker, }
+
+    9. Payments     -> Orders           [v] DONE,TESTED{Laravel Tinker, }
+
+    10. Orders      -> Payments         [v] DONE,TESTED{Laravel Tinker, }
+                    -> Users            [v] DONE,TESTED{Laravel Tinker, }
+                    -> Courses          [v] DONE,TESTED{Laravel Tinker, }
+
+    11. User_Settings -> Users          [v] DONE,TESTED{Laravel Tinker, }
+
+    12. Views       -> Users            [x]
+                    -> Courses          [x]
+
+}
+
