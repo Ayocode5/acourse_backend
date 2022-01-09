@@ -99,5 +99,3 @@ Model Relation {
                     -> Courses          [x]
 
 }
-
-Test
