@@ -25,9 +25,9 @@ services:
     restart: unless-stopped
     tty: true
     ports:  
-      - "33060:3306"
+      - "3306:3306"
     volumes:
-      - ./containers/mysql:/docker-entrypoint-initdb.d
+      - ./containers/mysql:/var/lib/mysql
     environment:
       MYSQL_DATABASE: acourse
       MYSQL_ROOT_PASSWORD: root

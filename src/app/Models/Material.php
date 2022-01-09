@@ -9,7 +9,7 @@ class Material extends Model
 {
     use HasFactory;
 
-    protected $guarded = ['id','created_at'];
+    protected $guarded = ['id'];
 
     public function course() {
         return $this->belongsTo(\App\Models\Course::class, 'course_id','id');

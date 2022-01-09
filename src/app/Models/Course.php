@@ -10,7 +10,7 @@ class Course extends Model
 {
     use SoftDeletes;
 
-    protected $guarded = ['id', 'created_at', 'deleted_at', 'updated_at'];
+    protected $guarded = ['id', 'deleted_at'];
 
     /*
      *  This Course belongs to Users

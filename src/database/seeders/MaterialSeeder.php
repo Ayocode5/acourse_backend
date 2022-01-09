@@ -14,15 +14,17 @@ class MaterialSeeder extends Seeder
      */
     public function run()
     {
-        $num = 11;
+        $num = 1;
         $materials = [];
 
-        while($num <= 20) {
+        while($num <= 300) {
             array_push($materials, [
                 'course_id' => 3,
-                'title' => "Material $num",
+                'title' => "Materi ke $num",
                 'duration' => random_int(100, 999),
                 'description' => 'lorem ipsum dolor sit amet',
+                'created_at' => Carbon::now(),
+                'updated_at' => Carbon::now() 
             ]);
 
             $num++;
