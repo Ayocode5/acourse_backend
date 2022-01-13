@@ -1,4 +1,4 @@
-Auth (Passport) {
+Auth (Sanctum) {
 
 }
 
@@ -9,10 +9,13 @@ API Routes {
             v1 {
 
                 auth {
+                    /register,
                     /login,
-                    /signup,
+                    /user,
                     /logout,
-                    /refresh_token
+                    /forgot-password,
+                    /reset-password,
+                    /verify-email
                 }
 
                 courses {

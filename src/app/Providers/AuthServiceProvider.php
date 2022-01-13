@@ -49,7 +49,7 @@ class AuthServiceProvider extends ServiceProvider
 
         // URL for password reset
         ResetPassword::createUrlUsing(function ($user, string $token) {
-            return 'https://example.com/reset-password?token=' . $token;
+            return 'http://localhost:8080/api/v1/auth/reset-password?token=' . $token;
         });
     }
 }

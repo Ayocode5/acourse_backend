@@ -25,6 +25,9 @@ class DatabaseSeeder extends Seeder
             //CartSeeder::class,
             //SubscriptionSeeder::class,
             //OrderSeeder::class,
+            //PaymentSeeder::class, -> NOPE
+            //ViewSeeder::class, -> NOPE
+            //UserSeetingSeeder::class
         ]);
     }
 }
