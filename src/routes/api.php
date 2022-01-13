@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,11 +16,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+    // if(Auth::user()->hasRole('user')) {
+    //     return 'Normal User > 2';
+    // }
+    // //return Auth::user();
     return $request->user();
 });
 
-Route::get('/testing', function () {
-   $x = \App\Models\Course::with('user')->get();
-
-   return response()->json($x,200);
-});
+require __DIR__ . '/auth.php';

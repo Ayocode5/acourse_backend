@@ -20,7 +20,7 @@ class CreateOrdersTable extends Migration
             $table->foreignId('owner_id');
             $table->string('product_name');
             $table->unsignedInteger('price');
-            $table->timestamp('paid_at');
+            $table->timestamp('paid_at')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
