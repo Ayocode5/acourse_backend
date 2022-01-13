@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
             //OrderSeeder::class,
             //PaymentSeeder::class, -> NOPE
             //ViewSeeder::class, -> NOPE
-            //UserSeetingSeeder::class
+            //UserSeetingSeeder::class -> NOPE
         ]);
     }
 }
